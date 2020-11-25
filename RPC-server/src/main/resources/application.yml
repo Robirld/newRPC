@@ -1,0 +1,14 @@
+server:
+  port: 8001
+
+eureka:
+  instance:
+    instance-id: rpc-server-8001
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8800/eureka
+spring:
+  application:
+    name: rpc-server

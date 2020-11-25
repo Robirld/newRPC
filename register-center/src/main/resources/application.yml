@@ -1,0 +1,11 @@
+server:
+  port: 8800
+
+eureka:
+  instance:
+    hostname: register-center-8800
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8800/eureka
