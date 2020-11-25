@@ -5,19 +5,63 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.newRPC</groupId>
-  <artifactId>newRPC</artifactId>
+  <artifactId>parent</artifactId>
   <version>1.0.0</version>
 
   <packaging>pom</packaging>
 
-  <name>Maven</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://maven.apache.org/</url>
-  <inceptionYear>2001</inceptionYear>
+  <name>newRPC</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.4.RELEASE</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+      <version>2.0.2.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+      <version>2.0.2.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>4.1.42.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-api</artifactId>
+      <version>1.7.2</version>
+    </dependency>
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-core</artifactId>
+      <version>1.7.2</version>
+    </dependency>
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-runtime</artifactId>
+      <version>1.7.2</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
